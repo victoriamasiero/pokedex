@@ -1,0 +1,31 @@
+<div class="screen screen--left">
+        <div class="screen-left__header">
+            <span class="screen-left__header-item" [ngClass]="{'active-tab': is_profile_tab}" (click)="toggleTab(true)">View Pokemon</span>
+            <span class="screen-left__header-item" [ngClass]="{'active-tab': !is_profile_tab}" (click)="toggleTab(false)">View favorites</span>
+        </div>
+
+
+        <div *ngIf="!is_profile_tab" class="screen-left__fav-list">
+            <app-pokemon-profile class="screen-left__fav-item" *ngFor="let fav of favorites_list;" [full_pokemon]="fav" [is_fun_size]="true" (click)="showPokemon(fav)"></app-pokemon-profile> 
+        </div>
+
+        <div class="screen-left__profile-cont">
+            <img *ngIf="!full_pokemon && is_profile_tab" class="screen-left__img" src="assets/img/pick_pokemon.png" alt="">
+
+            <span *ngIf="full_pokemon && is_profile_tab" class='screen-left__fav-cont'  [ngClass]="{'favorite': is_favorite}" (click)="toggleFromFavorites()">
+            </span>
+    
+            <app-pokemon-profile *ngIf="full_pokemon && is_profile_tab" class="screen-left__profile" [full_pokemon]="full_pokemon" (onSelectEvolution)="selectPokemon($event)"></app-pokemon-profile>
+        </div>
+</div>
+
+
+<div class="screen screen--right">
+    
+    <app-pokemon-search (onSearch)="searchPokemon($event)" (onReset)="resetPokemonList()"></app-pokemon-search>
+
+    <div class="screen-right__pokemon-list">
+        <app-pokemon-card class="screen-right__pokemon-card" *ngFor="let pokemon of pokemon_list;" [pokemon]="pokemon" (onSelectPokemon)="selectPokemon($event)"></app-pokemon-card>
+    </div>
+
+</div>

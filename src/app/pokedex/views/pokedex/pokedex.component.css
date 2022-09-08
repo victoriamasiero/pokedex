@@ -1,0 +1,159 @@
+:host {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 50%;
+  padding: 10px;
+}
+
+.screen--left {
+  background-color: rgb(211 235 251);
+  border-right: solid 15px #dd155f;
+}
+
+.screen-left__header {
+  display: flex;
+  flex: 0 0 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #92a3e28a;
+  color: #0a285f;
+}
+
+.screen-left__header-item {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.screen-left__header-item.active-tab {
+  text-decoration: underline;
+    color: #003fb4;
+    font-size: 20px;
+}
+
+.screen-left__header-item:hover {
+  cursor: pointer;
+  color: #003fb4bf;
+}
+
+
+.screen-left__profile-cont {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+.screen-left__img {
+  display: flex;
+  height: 30%;
+  width: 80%;
+  align-self: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.screen-left__fav-cont {
+  position: absolute;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  background-position: -25px -25px;
+  align-self: flex-end;
+  border-radius: 25px;
+}
+
+.screen-left__fav-cont.favorite {
+  transition-duration: 1s;
+  background-position: -2825px -25px;
+}
+
+.screen-left__profile {
+  display: flex;
+  flex: 1 1 auto;
+  margin: 5px 2px;
+  box-shadow: 0px 0px 5px 0px rgb(106 106 106);
+}
+
+
+.screen-left__fav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+  overflow: auto;
+}
+
+.screen-left__fav-item {
+  flex: 0 0 48%;
+  font-size: 12px;
+  margin: 2px;
+  box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+}
+
+.screen-left__fav-item:hover {
+  box-shadow: 0px 0px 5px 2px rgba(112,112,112,1);
+  cursor: pointer;
+}
+
+
+.screen--right {
+  display: flex;
+  flex-direction: column;
+  background-color: #d3ebfb;
+  border-left: solid 15px #dd155f;
+}
+
+.screen-right__pokemon-list {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.screen-right__pokemon-card {
+  display: flex;
+  flex: 0 0 30%;
+  height: 23%;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.screen-right__pokemon-card:hover {
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 82, 141);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 55, 94);
+}

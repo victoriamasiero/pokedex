@@ -1,0 +1,229 @@
+.profile__cont {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile__name {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 50px;
+  color: white;
+  background-color: #00005d;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.profile__meta-cont {
+  display: flex;
+  flex: 0 1 45%;
+  flex-direction: row;
+  background-color: white;
+}
+
+.profile__img-cont {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  background-color: #e3f5ff;
+}
+
+.profile__img {
+  display: flex;
+  flex: 1 1 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.profile__img-text {
+  display: flex;
+  padding: 5px;
+  flex: 0 1 35%;
+  color: #050b1b;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile__details-cont {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #4195c2;
+}
+
+.profile__traits-list {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 40%;
+}
+
+.profile__trait-item {
+  display: flex;
+  flex: 0 0 23px;
+  background-color: #ffffff94;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px;
+  padding: 3px;
+  color: #00005d;
+}
+
+.profile__trait-label {
+  flex: 0 0 50%;
+  display: flex;
+  font-weight: bold;
+}
+
+.profile__trait-value {
+  flex: 0 0 50%;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.profile__abilities-cont {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 40%;
+  margin: 3px;
+}
+
+.profile__abilities-label {
+  display: flex;
+  flex: 0 0 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: #daf2ff;
+  color: #0a285f;
+  font-weight: bold;
+}
+
+.profile__abilities-list {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__abilities-item {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: #00134d;
+  align-self: stretch;
+  background-color: #b2ddf6;
+  border: solid 1px white;
+}
+
+.profile__type-cont {
+  display: flex;
+  flex: 0 1 30px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile__type-item {
+  flex: 0 0 20%;
+  display: flex;
+  color: rgb(0 0 0);
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.profile__list-cont {
+  display: flex;
+  flex: 1 1 1px;
+  overflow: auto;
+}
+
+.profile__evolution-cont {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.profile__evolution-title {
+  color: #403f3f;
+  text-align: center;
+  background-color: #6977914a;
+  padding: 2px 0px;
+  font-weight: bolder;
+}
+
+.profile__evolution-card-cont {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__evolution-card {
+  display: flex;
+  flex: 0 1 70%;
+  height: 70%;
+}
+
+.profile__evolution-card:hover {
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.profile__moves-cont {
+  display: flex;
+  flex: 0 1 40%;
+  flex-direction: column;
+  background-color: #fffdf7;
+  overflow-y: auto;
+  border-left: solid #8d47004f 3px;
+  color: #201000bf;
+}
+
+.profile__move-title {
+  color: #8d4700;
+  text-align: center;
+  background-color: #8d47004a;
+  padding: 2px 0px;
+  font-weight: bolder;
+}
+
+.profile__move-item {
+  text-transform: capitalize;
+    padding: 7px 2px;
+    border: solid 1px #8d470026;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(141, 71, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 50, 1);
+}

@@ -1,0 +1,75 @@
+<div *ngIf="!loading" class="profile__cont">
+
+    <span class="profile__name"> {{full_pokemon.name}} </span>
+
+    <div class="profile__meta-cont">
+
+        <div class="profile__img-cont">
+            <span class="profile__img" [ngStyle]="{'background-image': 'url(' + full_pokemon.sprites.front_shiny + ')'}"></span>
+            <span *ngIf="!is_fun_size" class="profile__img-text"> {{full_pokemon.flavor_text.flavor_text}} </span>
+        </div>
+        
+        
+        <div class="profile__details-cont">
+
+            <div class="profile__traits-list">
+                <div class="profile__trait-item">
+                    <span class="profile__trait-label">Habitat:</span>
+                    <span class="profile__trait-value">{{full_pokemon.habitat.name}}</span>
+                </div>
+
+                <div class="profile__trait-item">
+                    <span class="profile__trait-label">Height:</span>
+                    <span class="profile__trait-value">{{full_pokemon.height}}</span>
+                </div>
+
+                <div class="profile__trait-item">
+                    <span class="profile__trait-label">Weight:</span>
+                    <span class="profile__trait-value">{{full_pokemon.weight}}</span>
+                </div>
+
+                <div class="profile__trait-item">
+                    <span class="profile__trait-label">Capture rate:</span>
+                    <span class="profile__trait-value">{{full_pokemon.capture_rate}}%</span>
+                </div>
+            </div>
+
+
+            <div *ngIf="!is_fun_size" class="profile__abilities-cont">
+                <span class="profile__abilities-label">Abilities</span>
+
+                <div class="profile__abilities-list">
+                    <span class="profile__abilities-item" *ngFor="let ability_item of full_pokemon.abilities"> {{ability_item.ability.name}} </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="profile__type-cont" [ngStyle]="{'background-color': full_pokemon.color }">
+
+        <span class="profile__type-item" *ngFor="let type_item of full_pokemon.types"> {{type_item.type.name}} </span>
+
+    </div>
+
+    <div *ngIf="!is_fun_size" class="profile__list-cont">
+        <div class="profile__evolution-cont">
+            <span class="profile__evolution-title">Evolves from:</span>
+
+            <div class="profile__evolution-card-cont">
+
+                <app-pokemon-card *ngIf="full_pokemon.evolves_from_species" class="profile__evolution-card" [pokemon]="{'name': full_pokemon.evolves_from_species.name, 'url': full_pokemon.evolves_from_species.url }" (onSelectPokemon)="onSelect($event)"></app-pokemon-card>
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="profile__moves-cont">
+            <span class="profile__move-title">Moves</span>
+            <span class="profile__move-item" *ngFor="let move_item of full_pokemon.moves"> {{move_item.move.name}} </span>
+        </div>
+    </div>
+
+</div>

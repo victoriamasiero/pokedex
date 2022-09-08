@@ -1,0 +1,26 @@
+.poke-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 5px 5px 0 0;
+  background-color: #46a5d7;
+  box-shadow: 0px 0px 5px 0px rgb(127 127 127);
+}
+
+.poke-card__img {
+  flex: 1 1 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.poke-card__name {
+  background-color: #0A285F;
+  color: white;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgb(10 40 95);
+  border-radius: 0 0 5px 5px;
+}

@@ -1,0 +1,60 @@
+.search {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-evenly;
+}
+
+.search__bar-cont {
+  display: flex;
+  flex: 0 1 80%;
+}
+
+.search__bar {
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+  flex: 0 1 90%;
+}
+
+.search__bar:focus {
+  color: #00b4cc;
+}
+
+.search__search-btn {
+  flex: 0 1 15%;
+  border: 1px solid #00b4cc;
+  background-color: #00b4cc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+
+  background-image: url(/assets/img/loupe.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.search__search-btn:hover {
+  cursor: pointer;
+  background-color: #0096aa;
+}
+
+.search__reset-btn {
+  flex: 0 0 10%;
+  border: none;
+  background-color: #00b111;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(/assets/img/circular.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.search__reset-btn:hover {
+  cursor: pointer;
+  background-color: #00880e;
+}

@@ -1,0 +1,19 @@
+<div class="screen-left">
+    <span class="screen-left__logo"></span>
+    <span class="screen-left__title">Log in to acces the Pokedex!</span>
+
+</div>
+
+
+<div class="screen-right">
+
+        <form class="screen--right__user-cont" (ngSubmit)="onSubmit()" [formGroup]="form">
+
+            <span class="screen-right__user-logo"></span>
+            <input formControlName="username" class="screen-right__username" type="text" placeholder="Username">
+            <input formControlName="password" class="screen-right__userpass" type="password" placeholder="Password">
+
+            <button class="screen-right__login-btn" type="submit" [disabled]="form.invalid">Log in</button>
+        </form>
+
+</div>
