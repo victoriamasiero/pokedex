@@ -169,12 +169,12 @@
   flex: 1 1 auto;
   justify-content: center;
   align-items: center;
+  padding: 5px;
 }
 
 .profile__evolution-card {
   display: flex;
   flex: 0 1 70%;
-  height: 70%;
 }
 
 .profile__evolution-card:hover {

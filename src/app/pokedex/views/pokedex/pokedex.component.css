@@ -115,9 +115,13 @@
   border-left: solid 15px #dd155f;
 }
 
+.screen-right__searchbar {
+  margin: 3px 0;
+}
+
 .screen-right__pokemon-list {
   display: flex;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   flex-wrap: wrap;
   justify-content: space-between;
   overflow-y: auto;
@@ -127,7 +131,6 @@
 .screen-right__pokemon-card {
   display: flex;
   flex: 0 0 30%;
-  height: 23%;
   margin: 5px 0;
   cursor: pointer;
 }
